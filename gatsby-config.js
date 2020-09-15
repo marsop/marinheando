@@ -1,12 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Mariñeando`,
-    description: `A simple but feature rich starter boilerplate for creating a multi-language Gatsby website (Internationalization / i18n) without third party plugins or packages and also focused on SEO. This starter also contains other main Gatsby configurations you might need.`,
+    description: `Experience the north coast of Galicia (Spain) like a local.`,
     author: `@marsop_`,
-    siteUrl: `https://iceberg-gatsby-multilang.netlify.com/`,
+    siteUrl: `https://marinheando.netlify.app/`,
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,

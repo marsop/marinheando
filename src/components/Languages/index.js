@@ -1,6 +1,10 @@
 import React from 'react';
-import { navigate } from "gatsby";
-import { useLocale } from '../../hooks/locale';
+import {
+  navigate
+} from "gatsby";
+import {
+  useLocale
+} from '../../hooks/locale';
 import useLanguageMapping from '../useLanguageMapping';
 
 import * as S from './styled';
@@ -8,7 +12,9 @@ import * as S from './styled';
 const Languages = () => {
   // Grab the locale (passed through context) from the Locale Provider 
   // through useLocale() hook
-  const { locale } = useLocale();
+  const {
+    locale
+  } = useLocale();
 
   const languageMapping = useLanguageMapping();
 
@@ -36,30 +42,37 @@ const Languages = () => {
 
     return lang === "en" ?
       navigate(`/${associatedUrls[lang]}`) :
-      navigate(`/${lang}/${associatedUrls[lang]}`);
+      navigate(`/${lang}${associatedUrls[lang]}`);
   }
 
-  return (
-    <S.LanguageWrapper>
-      <S.LanguageItem>
-        <S.LanguageLink 
-          to="/" 
-          onClick={(e) => handleClickLanguage(e, "en")}
-          className={locale === 'en' ? 'is-active' : ''}
-        >
-          EN
-        </S.LanguageLink>
-      </S.LanguageItem>
-      <S.LanguageItem>
-        <S.LanguageLink 
-          to="/" 
-          onClick={(e) => handleClickLanguage(e, "gl")}
-          className={locale === 'gl' ? 'is-active' : ''}
-        >
-          GL
-        </S.LanguageLink>
-      </S.LanguageItem>
-    </S.LanguageWrapper>
+  return ( <
+    S.LanguageWrapper >
+    <
+    S.LanguageItem >
+    <
+    S.LanguageLink to = "/"
+    onClick = {
+      (e) => handleClickLanguage(e, "en")
+    }
+    className = {
+      locale === 'en' ? 'is-active' : ''
+    } >
+    EN <
+    /S.LanguageLink> <
+    /S.LanguageItem> <
+    S.LanguageItem >
+    <
+    S.LanguageLink to = "/"
+    onClick = {
+      (e) => handleClickLanguage(e, "gl")
+    }
+    className = {
+      locale === 'gl' ? 'is-active' : ''
+    } >
+    GL <
+    /S.LanguageLink> <
+    /S.LanguageItem> <
+    /S.LanguageWrapper>
   );
 };
 
