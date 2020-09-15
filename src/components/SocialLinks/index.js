@@ -10,7 +10,7 @@ const SocialLinks = () => {
     <S.SocialLinksList>
       <S.SocialLinksItem>
         <S.SocialLinksLink
-          href="https://github.com/albertogregorio"
+          href="https://github.com/marsop"
           title="Github"
           target="_blank"
         >
