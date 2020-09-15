@@ -6,25 +6,31 @@ const {
   removeTrailingSlash,
 } = require(`./src/utils/gatsby-node-helpers`);
 
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage } = actions;
+exports.onCreatePage = ({
+  page,
+  actions
+}) => {
+  const {
+    createPage,
+    deletePage
+  } = actions;
 
   // First delete the incoming page that was automatically created by Gatsby
   // So everything in src/pages/
   deletePage(page);
 
-  // Grab the keys ('en' & 'pt') of locales and map over them
+  // Grab the keys ('en' & 'gl') of locales and map over them
   Object.keys(locales).map(lang => {
     // Use the values defined in "locales" to construct the path
-    const localizedPath = locales[lang].default
-      ? page.path
-      : `${locales[lang].path}${page.path}`;
+    const localizedPath = locales[lang].default ?
+      page.path :
+      `${locales[lang].path}${page.path}`;
 
     return createPage({
       // Pass on everything from the original page
       ...page,
-      // Since page.path returns with a trailing slash (e.g. "/pt/")
-      // We want to remove that (e.g. "pt/")
+      // Since page.path returns with a trailing slash (e.g. "/gl/")
+      // We want to remove that (e.g. "gl/")
       path: removeTrailingSlash(localizedPath),
       // Pass in the locale as context to every page
       // This context also gets passed to the src/components/layout file
@@ -42,8 +48,13 @@ exports.onCreatePage = ({ page, actions }) => {
 // A new node is created automatically with the filename
 // It's necessary to do that to filter by language
 // And the slug make sure the urls will be the same for all posts
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
+exports.onCreateNode = ({
+  node,
+  actions
+}) => {
+  const {
+    createNodeField
+  } = actions;
 
   // Check for "MarkdownRemark" type so that other files (e.g. images) are exluded
   if (node.internal.type === `MarkdownRemark`) {
@@ -68,20 +79,37 @@ exports.onCreateNode = ({ node, actions }) => {
     const slugFileName = name.split(`.`)[0];
     // Than remove the date if the name has the date info
     const slug =
-      slugFileName.length >= 10
-        ? slugFileName.slice(11)
-        : slugFileName;
+      slugFileName.length >= 10 ?
+      slugFileName.slice(11) :
+      slugFileName;
 
     // Adding the nodes on GraphQL for each post as "fields"
-    createNodeField({ node, name: `slug`, value: slug });
-    createNodeField({ node, name: `locale`, value: lang });
-    createNodeField({ node, name: `isDefault`, value: isDefault });
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug
+    });
+    createNodeField({
+      node,
+      name: `locale`,
+      value: lang
+    });
+    createNodeField({
+      node,
+      name: `isDefault`,
+      value: isDefault
+    });
   }
 };
 
 // Creating Posts and Pages for each node in AllMarkdownRemark
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+exports.createPages = async ({
+  graphql,
+  actions
+}) => {
+  const {
+    createPage
+  } = actions;
 
   // Templates for Posts List and Single post
   const postTemplate = path.resolve(`./src/templates/post.js`);
@@ -125,7 +153,9 @@ exports.createPages = async ({ graphql, actions }) => {
   let postsTotal = 0;
 
   // Creating each post
-  contentMarkdown.forEach(({ node: file }) => {
+  contentMarkdown.forEach(({
+    node: file
+  }) => {
     // Getting Slug and Title
     const slug = file.fields.slug;
     const title = file.frontmatter.title;
@@ -144,7 +174,12 @@ exports.createPages = async ({ graphql, actions }) => {
     postsTotal = isPage ? postsTotal + 0 : postsTotal + 1;
 
     createPage({
-      path: localizedSlug({ isDefault, locale, slug, isPage }),
+      path: localizedSlug({
+        isDefault,
+        locale,
+        slug,
+        isPage
+      }),
       component: template,
       context: {
         // Pass both the "title" and "locale" to find a unique file
@@ -163,16 +198,17 @@ exports.createPages = async ({ graphql, actions }) => {
 
   Object.keys(locales).map(lang => {
     // Use the values defined in "locales" to construct the path
-    const localizedPath = locales[lang].default
-      ? '/blog'
-      : `${locales[lang].path}/blog`;
+    const localizedPath = locales[lang].default ?
+      '/blog' :
+      `${locales[lang].path}/blog`;
 
-    return Array.from({ length: numPages }).forEach((_, index) => {
+    return Array.from({
+      length: numPages
+    }).forEach((_, index) => {
       createPage({
-        path:
-          index === 0
-            ? `${localizedPath}`
-            : `${localizedPath}/page/${index + 1}`,
+        path: index === 0 ?
+          `${localizedPath}` :
+          `${localizedPath}/page/${index + 1}`,
         component: postsListTemplate,
         context: {
           limit: postsPerPage,

@@ -8,16 +8,16 @@ module.exports = {
     dateFormat: `DD/MM/YYYY`,
     siteLanguage: `en`,
     ogLanguage: `en_US`,
-    defaultTitle: `Gatsby Starter with multi-language and CMS`,
+    defaultTitle: `Mariñeando`,
     defaultDescription: `Gatsby example site using Markdown, i18n and CMS`,
   },
-  pt: {
-    path: `pt`,
-    locale: `pt-BR`,
+  gl: {
+    path: `gl`,
+    locale: `gl`,
     dateFormat: `DD/MM/YYYY`,
-    siteLanguage: `pt`,
-    ogLanguage: `pt_BR`,
-    defaultTitle: `Gatsby Starter multilingue com CMS`,
+    siteLanguage: `gl`,
+    ogLanguage: `gl`,
+    defaultTitle: `Mariñeando`,
     defaultDescription: `Exemplo de Gatsby site usando Markdown, i18n e CMS`,
   },
 }

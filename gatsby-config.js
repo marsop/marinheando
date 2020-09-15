@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby multiple language starter`,
+    title: `Mariñeando`,
     description: `A simple but feature rich starter boilerplate for creating a multi-language Gatsby website (Internationalization / i18n) without third party plugins or packages and also focused on SEO. This starter also contains other main Gatsby configurations you might need.`,
-    author: `@diogorodrigues`,
+    author: `@marsop_`,
     siteUrl: `https://iceberg-gatsby-multilang.netlify.com/`,
   },
   plugins: [
@@ -64,8 +64,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: `gatsby-remark-relative-images`,
             options: {
               name: `uploads`,
@@ -86,12 +85,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`400`, `600`],
-          },
-        ],
+        fonts: [{
+          family: `Open Sans`,
+          variants: [`400`, `600`],
+        }, ],
       },
     },
 

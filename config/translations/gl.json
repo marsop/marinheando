@@ -1,0 +1,21 @@
+{
+  "home": "Início",
+
+  "hello": "Mariñeando",
+  "subline": "Internacionalização / i18n sen plugins ou paquetes de terceiros para Posts e Páxinas. URLs diferentes dependendo do idioma. Foco em SEO, PWA, Otimização de imagens, Styled Components e muito mais. Esse starter também é integrado ao Netlify CMS para gerenciar todas as páginas, posts e imagens.",
+  "latestPosts": "Útimos posts",
+  "category": "Categoria",
+  "allPosts": "Todos os Posts",
+  "toRead": "de leitura",
+
+  "next": "Próximo",
+  "prev": "Anterior",
+  "of": "de",
+
+  "button": "Botón",
+
+  "aboutProject": "Mariñeando é un proxecto de Alberto Gregorio.",
+  "seeMorePWA": "Vexa máis proxecto aquí",
+  "maintainedBy": "Projeto mantido por",
+  "contributeMessage": "Você sempre poderá contribuir com esse projeto no"
+}
