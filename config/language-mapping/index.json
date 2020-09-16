@@ -1,39 +1,23 @@
 {
   "languageMapping": [{
       "en": "/about",
-      "gl": "/sobre"
+      "gl": "/sobre",
+      "es": "/sobre"
     },
     {
       "en": "/blog",
-      "gl": "/blog"
+      "gl": "/blog",
+      "es": "/blog"
     },
     {
       "en": "/contact",
-      "gl": "/contato"
+      "gl": "/contacto",
+      "es": "/contacto"
     },
     {
       "en": "/blog/ribadeo-port",
-      "gl": "/blog/ribadeo-porto"
-    },
-    {
-      "en": "/blog/markdown-examples",
-      "gl": "/blog/exemplos-de-markdown"
-    },
-    {
-      "en": "/blog/javascript-language",
-      "gl": "/blog/linguagem-javascript"
-    },
-    {
-      "en": "/blog/digital-image-processing",
-      "gl": "/blog/processamento-de-imagens-digitais"
-    },
-    {
-      "en": "/blog/adding-menu-items",
-      "gl": "/blog/adicionando-itens-no-menu"
-    },
-    {
-      "en": "/blog/creating-posts-and-pages",
-      "gl": "/blog/criacao-de-posts-e-paginas"
+      "gl": "/blog/ribadeo-porto",
+      "es": "/blog/ribadeo-puerto"
     }
   ]
 }

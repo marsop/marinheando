@@ -1,10 +1,10 @@
 {
-  "home": "Início",
+  "home": "Inicio",
 
   "hello": "Mariñeando",
   "subline": "Experimenta a costa galega coma un local.",
   "latestPosts": "Útimos posts",
-  "category": "Categoria",
+  "category": "Categoría",
   "allPosts": "Todos os Posts",
   "toRead": "de leitura",
 
@@ -17,5 +17,5 @@
   "aboutProject": "Mariñeando é un proxecto de Alberto Gregorio.",
   "seeMorePWA": "Vexa máis proxecto aquí",
   "maintainedBy": "Projeto mantido por",
-  "contributeMessage": "Você sempre poderá contribuir com esse projeto no"
+  "contributeMessage": "Vostede sempre poderá contribuir con este proxecto no"
 }
