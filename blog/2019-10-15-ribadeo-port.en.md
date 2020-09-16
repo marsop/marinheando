@@ -7,4 +7,4 @@ background: '#7d4cdb'
 image: '/assets/img/07.jpg'
 ---
 
-Example Text
+Example Text.

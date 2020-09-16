@@ -20,4 +20,13 @@ module.exports = {
     defaultTitle: `Mariñeando`,
     defaultDescription: `Experimenta a costa galega coma un local`,
   },
+  es: {
+    path: `es`,
+    locale: `es-ES`,
+    dateFormat: `DD/MM/YYYY`,
+    siteLanguage: `es`,
+    ogLanguage: `es_ES`,
+    defaultTitle: `Mariñeando`,
+    defaultDescription: `Experimenta la costa galega como un local`,
+  },
 }
