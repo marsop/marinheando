@@ -38,6 +38,7 @@ const query = graphql `
             languageMapping {
               en
               gl
+              es
             }
           }
         }
