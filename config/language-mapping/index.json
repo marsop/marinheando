@@ -18,10 +18,16 @@
       "en": "/blog/ribadeo-port",
       "gl": "/blog/ribadeo-porto",
       "es": "/blog/ribadeo-puerto"
-    }, {
+    }, 
+    {
       "en": "/blog/isla-pancha",
       "gl": "/blog/illa-pancha",
       "es": "/blog/isla-pancha"
+    }, 
+    {
+      "en": "/blog/las-catedrales",
+      "gl": "/blog/as-catedrais",
+      "es": "/blog/las-catedrales"
     }
   ]
 }
